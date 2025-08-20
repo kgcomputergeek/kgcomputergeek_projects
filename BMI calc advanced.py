@@ -1,54 +1,29 @@
-#import math
-
-# # 🚨 Don't change the code below 👇
-# height = input("enter your height in m: ")
-# weight = input("enter your weight in kg: ")
-# # 🚨 Don't change the code above 👆
-
-#Write your code below this line 👇
-
-#bmi formula = kg/m^2
-
-
-
-#need an result output = ("Your BMI is" + "%)
-#might need rounding for percentage to the nearest 10th math.ceil
 """
-#potential upgrades
-#dude you should totally upgrade your program to convert weight in kg to lbs and same thing with height (ft/in)
-#conditions where bmi falls into a certain percentage, it corresponds with a label
+BMI calculator
 
-BMI <18.5 underweight
-BMI >=18.5 AND <=25 normal
-BMI >25 AND <30 overweight
-BMI >30 +
+- Formula: BMI = weight_kg / (height_m**2)
+- Categories: <18.5 underweight, 18.5–24.9 normal, 25–29.9 overweight, >=30 obese
 """
-"""
-
-****LET THE CODE BELOW THIS COMMENT REPRESENT THE REQUESTED PROGRAM WHICH IS
-
-1) CALCULATE BMI BASED ON HEIGHT INPUT (IN M) AND WEIGHT INPUT (IN KG)
-
-"""
-#height in m
-#weight in kg
-#bmi = kg/m2
 
 import math
-# 🚨 Don't change the code below 👇
+
+# Inputs
 height = float(input("enter your height in m: "))
 weight = float(input("enter your weight in kg: "))
-# 🚨 Don't change the code above 👆
 
-#height converter from metric to imperial
-
-#1 kg = 2.205 lbs
-def weight_conversion (height, lbs):
-    height * 2.205
-def height_conversion (heights, ft,):
+# Compute BMI
+bmi = weight / height**2
 
 
 
+if bmi < 18.5:
+	print("You are underweight.")
+elif bmi < 25:
+	print("You have a normal weight.")
+elif bmi < 30:
+	print("You are overweight.")
+else:
+	print("You are obese.")
 
-    BMI = weight/math.pow(height,2)
-print(math.floor(BMI))
+# Display rounded BMI (nearest whole number) and category
+print(f"Your BMI is {round(bmi)}")

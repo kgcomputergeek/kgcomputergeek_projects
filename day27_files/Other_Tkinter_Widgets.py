@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import * #imports all the tkinter modules hence asterisk
 
 #Creating a new window and configurations
 window = Tk()
@@ -21,7 +21,7 @@ button.pack()
 #Entries
 entry = Entry(width=30)
 #Add some text to begin with
-entry.insert(END, string="Some text to begin with.")
+entry.insert(END, string="Some text to begin with.") #END is an index of the last character in the textbox
 #Gets text in entry
 print(entry.get())
 entry.pack()
