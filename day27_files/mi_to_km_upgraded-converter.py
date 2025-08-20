@@ -38,7 +38,7 @@ miles_entry.grid(column=1, row=0)
 
 #conversion function
 def m_to_k_conversion():
-    conversion_factor = int(miles_entry.get()) * 1.6
+    conversion_factor = round(int(miles_entry.get()) * 1.60934)
     num.config(text=conversion_factor)
 
 
